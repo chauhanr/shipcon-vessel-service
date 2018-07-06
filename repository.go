@@ -3,8 +3,7 @@ package main
 import (
 	pb "github.com/chauhanr/shipcon-vessel-service/proto/vessel"
 	"gopkg.in/mgo.v2"
-	"errors"
-	"gopkg.in/mgo.v2/bson"
+		"gopkg.in/mgo.v2/bson"
 )
 
 const(
@@ -37,7 +36,7 @@ func (repo *VesselRepository) FindAvailable(spec *pb.Specification) (*pb.Vessel,
 	if err != nil{
 		return nil, err
 	}
-	return nil, errors.New("Vessel not found")
+	return vessel, nil
 }
 
 func (repo *VesselRepository) Create(vessel *pb.Vessel) error {

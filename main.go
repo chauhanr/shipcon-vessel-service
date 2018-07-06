@@ -20,6 +20,7 @@ func createDummyData(repo Repository){
 	for _, v := range vessels {
 		repo.Create(v)
 	}
+	log.Println("Successfully inserted dummy data to the mongodb")
 }
 
 
